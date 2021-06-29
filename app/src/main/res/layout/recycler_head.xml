@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="180dp"
+        android:layout_height="120dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewWind"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/recycler_head_wind"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewPressure"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/recycler_head_pressure"
+            app:layout_constraintBottom_toTopOf="@+id/imageViewHumidity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewWind" />
+
+        <ImageView
+            android:id="@+id/imageViewHumidity"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/recycler_head_humidity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_begin="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewWindSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewWind"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            tools:text="5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" м/с"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewWind"
+            app:layout_constraintStart_toEndOf="@+id/textViewWindSpeed"/>
+
+        <TextView
+            android:id="@+id/textViewPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPressure"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            tools:text="742" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" мм.рт.ст"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPressure"
+            app:layout_constraintStart_toEndOf="@+id/textViewPressure"/>
+
+        <TextView
+            android:id="@+id/textViewHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidity"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            tools:text="79" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" %"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidity"
+            app:layout_constraintStart_toEndOf="@+id/textViewHumidity"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
